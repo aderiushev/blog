@@ -1,0 +1,9 @@
+{% extends 'myblog/base.html' %}
+
+{% block content %}
+    {% for post in post_list %}
+        {{ post.title }}
+    {% empty %}
+        No posts yet
+    {% endfor %}
+{% endblock %}
