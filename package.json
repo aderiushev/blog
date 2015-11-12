@@ -1,0 +1,9 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "",
+  "dependencies": {
+	"bower": "~1.6.5"
+  }
+}
