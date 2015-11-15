@@ -1,9 +1,28 @@
 {% extends 'myblog/base.html' %}
 
 {% block content %}
-    {% for post in post_list %}
-        {{ post.title }}
-    {% empty %}
-        No posts yet
-    {% endfor %}
+    <div flex-item="12" class="mt++">
+        <span class="fs-title display-block mb">Latest Posts</span>
+
+        <div class="divider divider--dark"></div>
+
+        <ul class="list mt++">
+            {% for post in post_list %}
+            <li class="list-row list-row--has-separator">
+                <div class="list-row__primary">
+                    <i class="icon icon--l icon--light-green icon--circled mdi mdi-file-document"></i>
+                </div>
+
+                <div class="list-row__content">
+                    <span><a href="{% url 'blog-post' post.title|slugify %}">{{ post.title }}</a></span>
+                </div>
+            </li>
+            {% empty %}
+                No posts yet
+            {% endfor %}
+        </ul>
+    </div>
+
+
+
 {% endblock %}

@@ -1,7 +1,23 @@
 from django.contrib import admin
-
-# Register your models here.
+from django import forms
+from redactor.widgets import RedactorEditor
+import blog.settings as settings
 
 from .models import Post
 
-admin.site.register(Post)
+
+class PostAdminForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = '__all__'
+        widgets = {
+           'text': RedactorEditor(
+               upload_to='myblog/static/uploads'
+           ),
+        }
+
+
+class PostAdmin(admin.ModelAdmin):
+    form = PostAdminForm
+
+admin.site.register(Post, PostAdmin)
