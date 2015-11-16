@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls import patterns
 """blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -21,3 +23,9 @@ urlpatterns = [
     url(r'', include('myblog.urls')),
     url(r'^redactor/', include('redactor.urls')),
 ]
+
+if settings.DEBUG:
+    # static files (images, css, javascript, etc.)
+    urlpatterns += patterns('',
+        (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+        'document_root': settings.MEDIA_ROOT}))

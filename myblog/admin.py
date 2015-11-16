@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django import forms
 from redactor.widgets import RedactorEditor
-import blog.settings as settings
 
 from .models import Post
 
@@ -11,9 +10,7 @@ class PostAdminForm(forms.ModelForm):
         model = Post
         fields = '__all__'
         widgets = {
-           'text': RedactorEditor(
-               upload_to='myblog/static/uploads'
-           ),
+           'text': RedactorEditor(),
         }
 
 
