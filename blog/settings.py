@@ -22,6 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '4+gw08j-x2j$^oclw=bplmcm(i)rp*=opilz-#_j4uwfyhbzyv'
 
+SITE_ID = 1
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -33,12 +35,14 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myblog',
-    'redactor'
+    'redactor',
+    'disqus'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,3 +117,6 @@ REDACTOR_OPTIONS = {'lang': 'en'}
 REDACTOR_UPLOAD_HANDLER = 'redactor.handlers.UUIDUploader'
 
 REDACTOR_UPLOAD = 'uploads/'
+
+DISQUS_API_KEY = 'sEKicwUAsmNRGBAOmz2WwcIGZbSWWsXnd10H9rP8oIPEaXKvz8eCfVkma7264Jrn'
+DISQUS_WEBSITE_SHORTNAME = 'derushev.ga'
