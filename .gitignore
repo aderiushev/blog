@@ -5,3 +5,5 @@ __pycache__/
 bower_components/
 node_modules/
 media/uploads/*
+blog/static/*
+myblog/static/myblog/*
