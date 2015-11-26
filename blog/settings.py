@@ -121,7 +121,6 @@ STATICFILES_FINDERS = (
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
-REDACTOR_OPTIONS = {'lang': 'en'}
 REDACTOR_UPLOAD_HANDLER = 'redactor.handlers.UUIDUploader'
 
 REDACTOR_UPLOAD = 'uploads/'
