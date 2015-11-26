@@ -118,12 +118,9 @@ STATICFILES_FINDERS = (
 	'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+#MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 
 REDACTOR_UPLOAD_HANDLER = 'redactor.handlers.UUIDUploader'
 
-REDACTOR_UPLOAD = 'uploads/'
-
-DISQUS_API_KEY = 'sEKicwUAsmNRGBAOmz2WwcIGZbSWWsXnd10H9rP8oIPEaXKvz8eCfVkma7264Jrn'
-DISQUS_WEBSITE_SHORTNAME = 'derushev.me'
+DISQUS_WEBSITE_SHORTNAME = 'derushev'
