@@ -6,7 +6,6 @@ bower_components/
 node_modules/
 media/uploads/*
 blog/static/*
-myblog/static/myblog/*
 blog.sock
 blog/settings.py
 *.sqlite3
