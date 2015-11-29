@@ -1,6 +1,22 @@
 {% extends 'myblog/base.html' %}
-
+{% load staticfiles %}
 {% block content %}
+    <div flex-container="row" flex-gutter="24">
+        <div flex-item="12">
+            <ul class="list mt++">
+                <li class="list-row list-row--has-separator">
+                    <div class="list-row__secondary">
+                        <i class="icon icon--s icon--grey icon--flat mdi mdi-file-pdf"></i>
+                    </div>
+
+                    <div class="list-row__content">
+                        <span><a href="{% static 'myblog/files/resume.pdf' %}">Resume</a></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <div flex-container="row" flex-gutter="24">
         <div flex-item="4">
             <div class="card">
