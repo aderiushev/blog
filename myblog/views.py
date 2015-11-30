@@ -5,6 +5,9 @@ from .models import Post
 class ResumeView(generic.TemplateView):
     template_name = 'myblog/resume.html'
 
+class PortfolioView(generic.TemplateView):
+    template_name = 'myblog/portfolio.html'
+
 
 class BlogView(generic.ListView):
     paginate_by = 5

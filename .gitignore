@@ -10,3 +10,4 @@ blog.sock
 blog/settings.py
 *.sqlite3
 *.init
+blog/media/*
