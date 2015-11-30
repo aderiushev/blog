@@ -5,6 +5,7 @@ from .models import Post
 class ResumeView(generic.TemplateView):
     template_name = 'myblog/resume.html'
 
+
 class PortfolioView(generic.TemplateView):
     template_name = 'myblog/portfolio.html'
 
